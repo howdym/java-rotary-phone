@@ -25,10 +25,104 @@ before processing.
  */
 
 public class Hospital {
-    public static int analyze(String data, int secs) {
-        // paste your code here, or call your own function somehow
-        //return HospitalSolution.analyze(data,secs);
-        return -1;
+  public static String splitter(String data) { 
+     String x = data;  
+     String update = ""; 
+     int c = x.indexOf("iiih"); 
+     int d = x.indexOf("hiii"); 
+     if (d == -1 || c == -1) { 
+       return x; 
+     }
+     for (int i = 0; i < data.length(); i++) { 
+       int a = x.indexOf("iiih"); 
+       int b = x.indexOf("hiii");
+       if (b == -1 || a == -1) { 
+         update = update;
+       } else if (a < b) { 
+         update = update + x.substring(0, a) + x.substring(b + 4); 
+         x = x.substring(b+4);
+       } else if (b < a) { 
+         update = update + x.substring(0, a - b); 
+         String inter = x.substring(a-b); 
+         x = inter;
+       } 
+     } 
+     return update; 
+  }
+  
+  public static double[] count(String update) { 
+    double beats = 0; 
+    double iv = 0; 
+    for (int i = 0; i < update.length(); i++) { 
+      String z = update.substring(i, i+1); 
+      if (z.equals("i")) { 
+        iv++; 
+      } else if (z.equals("h")) { 
+        beats++; 
+      } 
+    } 
+    double[] result = {beats, iv};
+    return result;
+  }
+  
+  public static int check(double iv, double beats, int secs) {     
+    double ivh = beats * 3.0 / 2.0; 
+    double time = secs;
+    double bpm = beats / time; 
+    double baseline = 50.0/60.0;
+    if (bpm < baseline) { 
+      return 2; 
+    } else if (iv < ivh) { 
+      return 1; 
+    } else { 
+      return 0; 
+    } 
+  }
+  
+  public static int analyze(String data, int secs) {
+    String update = splitter(data); 
+    double[] ace = count(update); 
+    double beats = ace[0]; 
+    double iv = ace[1];
+    int answer = check(iv, beats, secs);
+    return answer;
+    
+    /*
+    String x = data;  
+    String update = ""; 
+    double beats = 0; 
+    double iv = 0; 
+    for (int i = 0; i < data.length(); i++) { 
+      int a = x.indexOf("iiih"); 
+      int b = x.indexOf("hiii");
+      if (a < b) { 
+        update = x.substring(0, a) + x.substring(b + 4); 
+      } else if (b > a) { 
+        update = x.substring(b + 4); 
+      } 
     }
+    for (int i = 0; i < update.length(); i++) { 
+      String z = update.substring(i, i+1); 
+      if (z.equals("i")) { 
+        iv++; 
+      } else if (z.equals("h")) { 
+        beats++; 
+      } 
+    } 
+    double ivh = beats * 3.0 / 2.0; 
+    double time = secs;
+    double bpm = beats / time; 
+    double baseline = 50.0/60.0;
+    if (bpm < baseline) { 
+      return 2; 
+    } else if (iv < ivh) { 
+      return 1; 
+    } else { 
+      return 0; 
+    } 
+// paste your code here, or call your own function somehow
+        //return HospitalSolution.analyze(data,secs);
+  */
+  }
 }
     

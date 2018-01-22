@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <drjava version="drjava-20160913-225446">
-  <project autorefresh="false" main="" root="" work="">
+  <project autorefresh="false" root="" work="">
     <createjar file=""/>
     <source>
-      <file active="true" name="CharMatrixTester.java" package="" timestamp="17-Jan-2018 10:13:36">
-        <select from="849" to="849"/>
-        <scroll column="1187" row="0"/>
+      <file active="true" name="CharMatrix.java" package="" timestamp="19-Jan-2018 12:01:37">
+        <select from="1834" to="1834"/>
+        <scroll column="919" row="0"/>
       </file>
-      <file name="CharMatrix.java" package="" timestamp="17-Jan-2018 09:39:56">
-        <select from="849" to="849"/>
-        <scroll column="1187" row="0"/>
+      <file name="CharMatrixTester.java" package="" timestamp="19-Jan-2018 11:56:37">
+        <select from="1834" to="1834"/>
+        <scroll column="919" row="0"/>
       </file>
     </source>
     <included/>
     <excluded/>
     <collapsed/>
     <classpath/>
-    <breakpoints/>
+    <breakpoints>
+      <breakpoint enabled="true" file="CharMatrix.java" line="1"/>
+    </breakpoints>
     <watches/>
     <bookmarks/>
     <preferences/>

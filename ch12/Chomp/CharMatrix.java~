@@ -1,0 +1,167 @@
+import java.util.Arrays;
+/*
+ * Implements a 2-D array of characters
+ */
+
+public class CharMatrix
+{
+  // Fields:
+    //  ________________________________________________
+    //  ...
+  char[][] board = null;
+  /*
+   * Constructor: creates a grid with dimensions rows, cols,
+   * and fills it with spaces
+   */
+  public CharMatrix(int rows, int cols)
+  { 
+    char space = ' ';
+    board = new char[rows][cols]; 
+    for (int r = 0; r < rows; r++) { 
+      for (int c = 0; c < cols; c++) { 
+        board[r][c] = space; 
+      } 
+    } 
+      //    ________________________________________________
+      //    ...
+  }
+
+  /*
+   * Constructor: creates a grid with dimensions rows , cols ,
+   * and fills it with the fill  character
+   */
+  public CharMatrix(int rows, int cols, char fill)
+  { 
+    board = new char[rows][cols];
+    for (int r = 0; r < rows; r++) { 
+      for (int c = 0; c < cols; c++) { 
+        board[r][c] = fill; 
+      } 
+    } 
+      //    ________________________________________________
+      //    ...
+  }
+
+  /*
+   * Returns the number of rows in grid
+   */
+  public int numRows()
+  {
+      //    ________________________________________________
+      //    ...
+    return board.length;
+  }
+
+  /*
+   * Returns the number of columns in grid
+   */
+  public int numCols()
+  {
+      //    ________________________________________________
+      //    ...
+    return board[0].length;
+  }
+
+  /*
+   * Returns the character at row, col location
+   */
+  public char charAt(int row, int col)
+  {
+      // ________________________________________________
+      //...
+    char[] intermediate = board[row];
+    return intermediate[col];
+  }
+
+  /*
+   * Sets the character at row, col location to ch
+   */
+  public void setCharAt(int row, int col, char ch)
+  {
+    board[row][col] = ch;
+      //    ________________________________________________
+      //...
+  }
+
+  /*
+   * Returns true if the character at row, col is a SPACE,
+   * false otherwise
+   */
+  public boolean isEmpty(int row, int col)
+  {
+    return board[row][col] == ' ';
+      //________________________________________________
+      //...
+  }
+
+  /*
+   * Fills the given rectangle with the fill characters.
+   * row0, col0 is the upper left corner and row1, col1 is the
+   * lower right corner of the rectangle.
+   */
+  public void fillRect(int row0, int col0, int row1, int col1, char fill)
+  {
+    int rows = numRows(); 
+    int cols = numCols();
+    char[][] intermediate = new char[rows][cols];
+    for (int r = 0; r < rows; r++) { 
+      for (int c = 0; c < cols; c++) { 
+        if (r >= row0 && r <= row1 && c >= col0 && c >= col1) { 
+          intermediate[r][c] = fill;  
+        } else { 
+          intermediate[r][c] = board[r][c]; 
+        }
+      } 
+    }
+    board = intermediate;
+      //________________________________________________
+      //    ...
+  }
+
+  /*
+   * Fills the given rectangle with the SPACE characters.
+   * row0, col0 is the upper left corner and row1, col1 is the
+   * lower right corner of the rectangle.
+   */
+  public void clearRect(int row0, int col0, int row1, int col1)
+  { 
+    fillRect(row0, col0, row1, col1, ' '); 
+      //________________________________________________
+      //...
+  }
+
+  /*
+   * Returns the count of all non-SPACE characters in row.
+   */
+  public int countInRow(int row)
+  {
+      //________________________________________________
+      //... 
+    int result = 0; 
+    for (int x = 0; x < board.length; x++) { 
+      if (board[x][row] != ' ') { 
+        result++; 
+      } 
+    } 
+      //________________________________________________
+      //...
+    return result;
+  }
+
+  /*
+   * Returns the count of all non-SPACE characters in col.
+   */
+  public int countInCol(int col)
+  { 
+    char[] intermediate = board[col]; 
+    int result = 0; 
+    for (int x = 0; x < intermediate.length; x++) { 
+      if (intermediate[x] != ' ') { 
+        result++; 
+      } 
+    }
+    return result;
+    
+  }
+
+}
