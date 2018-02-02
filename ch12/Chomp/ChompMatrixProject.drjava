@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< HEAD
 <drjava version="drjava-20140826-r5761">
   <project autorefresh="false" root="" work="">
     <createjar file=""/>
@@ -9,6 +10,18 @@
       </file>
       <file name="CharMatrixTester.java" package="" timestamp="22-Jan-2018 11:29:35">
         <select from="1834" to="1834"/>
+=======
+<drjava version="drjava-20160913-225446">
+  <project autorefresh="false" root="" work="">
+    <createjar file=""/>
+    <source>
+      <file active="true" name="CharMatrixTester.java" package="" timestamp="20-Jan-2018 18:31:23">
+        <select from="2119" to="2119"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="CharMatrix.java" package="" timestamp="20-Jan-2018 17:57:41">
+        <select from="2119" to="2119"/>
+>>>>>>> eab2065a553e2c8251540f72b114c7718510c6b4
         <scroll column="0" row="0"/>
       </file>
     </source>
