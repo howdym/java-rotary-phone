@@ -4,6 +4,7 @@
     <createjar file=""/>
     <source>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <file active="true" name="Hospital.java" package="" timestamp="18-Jan-2018 12:02:31">
         <select from="1506" to="1506"/>
         <scroll column="379" row="0"/>
@@ -17,14 +18,17 @@
         <scroll column="379" row="0"/>
 =======
       <file active="true" name="Main.java" package="" timestamp="19-Jan-2018 10:26:27">
-        <select from="195" to="195"/>
-        <scroll column="0" row="0"/>
-      </file>
-      <file name="HospitalTest.java" package="" timestamp="18-Jan-2018 10:08:04">
+=======
+      <file active="true" name="Main.java" package="" timestamp="19-Jan-2018 10:28:11">
+>>>>>>> 3601d75d31f6154b856868644df8d36b763cfe6a
         <select from="195" to="195"/>
         <scroll column="0" row="0"/>
       </file>
       <file name="Hospital.java" package="" timestamp="18-Jan-2018 19:57:45">
+        <select from="195" to="195"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="HospitalTest.java" package="" timestamp="24-Jan-2018 12:43:01">
         <select from="195" to="195"/>
         <scroll column="0" row="0"/>
 >>>>>>> eab2065a553e2c8251540f72b114c7718510c6b4
